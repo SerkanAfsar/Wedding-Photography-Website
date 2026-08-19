@@ -1,0 +1,59 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+.services-sub {
+  @include flexBox(column, center, center);
+  width: 100%;
+  background: url("../images/servicesub01.png") no-repeat center top;
+
+  background-color: #f8f8f8;
+
+  text-align: center;
+  padding: 20px 0px;
+
+  @include respond-up(md) {
+    background-size: 85% auto;
+    background-position: left top;
+  }
+  @include respond-up(xl) {
+    background-position: left center;
+  }
+  @include respond-up(xxl) {
+    background-size: 70% 100%;
+    min-height: 717px;
+  }
+  @include respond-up(3xl) {
+    background-size: 60% auto;
+    height: 1200px;
+    background-position: top left;
+  }
+
+  &-info {
+    display: inline-block;
+    outline: 1px solid get-colors(color-primary);
+    outline-offset: -10px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    @include respond-up(md) {
+      max-width: 380px;
+    }
+    @include respond-up(xl) {
+      max-width: 440px;
+      height: 590px;
+    }
+    @include respond-up(xxl) {
+      transform: translateX(-25%);
+    }
+    @include respond-up(3xl) {
+      transform: translateX(80px);
+    }
+    h5 {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 20px;
+      max-width: 320px;
+      display: inline-block;
+    }
+  }
+}

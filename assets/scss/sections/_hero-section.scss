@@ -1,0 +1,14 @@
+@use "../abstract/mixins" as *;
+.hero {
+  width: 100%;
+  background: url("../images/hero.png") no-repeat center;
+  background-size: cover;
+  @include flexBox(column);
+  min-height: 500px;
+  @include respond-up(md) {
+  }
+
+  @include respond-up(xl) {
+    height: 100vh;
+  }
+}

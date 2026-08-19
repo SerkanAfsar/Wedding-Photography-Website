@@ -1,0 +1,18 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+.btn {
+  border: 2px solid #e9e1d9;
+  background: #e9e1d9;
+  color: #484848;
+  font-family: $font-cormorant;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include flexBox;
+  padding: 16px 40px;
+  &:hover {
+    background: inherit;
+    text-decoration: underline;
+  }
+}

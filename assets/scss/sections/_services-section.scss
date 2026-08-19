@@ -1,0 +1,23 @@
+@use "../abstract/mixins" as *;
+.services {
+  //   .slick-slide {
+  //     margin: 0px 40px;
+  //   }
+  .slick-slide {
+    margin: 0px 20px;
+    @include respond-up(xxl) {
+      margin: 0 38px;
+    }
+    & > div {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .slick-list {
+    @include respond-up(xxl) {
+      margin: 0 -38px;
+    }
+  }
+}

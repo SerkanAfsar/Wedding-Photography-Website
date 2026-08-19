@@ -1,0 +1,18 @@
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+.counter-item {
+  @include flexBox(column, center, center);
+  gap: 10px;
+  h3 {
+    margin-bottom: -20px;
+    .odometer-inside,
+    .odometer-digit,
+    .odometer-digit-inner,
+    .odometer-value {
+      color: inherit !important;
+    }
+  }
+  span.desc {
+    // margin-top: -50px;
+  }
+}

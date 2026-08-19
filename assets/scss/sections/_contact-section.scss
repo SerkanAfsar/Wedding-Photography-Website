@@ -1,0 +1,76 @@
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+%elem {
+  display: block;
+  width: 100%;
+}
+.contact {
+  width: 100%;
+  display: block;
+  &-col {
+    background: #f8f8f8;
+  }
+  h4 {
+    margin-bottom: 10px;
+  }
+  form {
+    display: block;
+    text-align: left;
+    padding: 15px 20px;
+    @include respond-up(md) {
+      padding: 30px 40px;
+    }
+    @include respond-up(xl) {
+      padding: 70px 60px;
+    }
+    .field {
+      @extend %elem;
+
+      input,
+      textarea {
+        font-size: 25px;
+        color: #000;
+        @extend %elem;
+        background: transparent;
+        border-bottom: 1px solid #c6c6c6;
+        padding: 10px 0px;
+        margin-bottom: 10px;
+        @include respond-up(xl) {
+          padding: 15px 0px;
+        }
+      }
+      textarea {
+        height: 110px;
+        display: block;
+        resize: none;
+      }
+      &.first {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        @include respond-up(md) {
+          margin-top: 40px;
+        }
+        @include respond-up(lg) {
+        }
+        @include respond-up(xl) {
+          margin-top: 110px;
+        }
+      }
+    }
+    button[type="submit"] {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 20px;
+      @include respond-up(lg) {
+        width: auto;
+        padding: 20px 60px;
+      }
+    }
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

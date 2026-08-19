@@ -1,0 +1,98 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px,
+// );
+
+:root {
+  --h1-font-size: 45px;
+  --h2-font-size: 30px;
+  --h3-font-size: 25px;
+  --h4-font-size: 20px;
+  --h4-about-font-size: 28px;
+
+  --hero-sub-span-font-size: 34px;
+  --bs-container-width: 0px;
+  --p-font-size: 20px;
+
+  @include respond-up(sm) {
+    --bs-container-width: 540px;
+  }
+
+  @include respond-up(md) {
+    --h2-font-size: 40px;
+    --bs-container-width: 720px;
+    --h4-about-font-size: 32px;
+    // --hero-sub-span-font-size: 40px;
+  }
+  @include respond-up(lg) {
+    --h1-font-size: 60px;
+    --h2-font-size: 50px;
+    --h3-font-size: 31px;
+    --hero-sub-span-font-size: 36px;
+    --bs-container-width: 960px;
+  }
+  @include respond-up(xl) {
+    --h1-font-size: 64px;
+    --h2-font-size: 80px;
+    --h3-font-size: 28px;
+    --h4-font-size: 20px;
+    --h5-font-size: 16px;
+    --h6-font-size: 12px;
+
+    --h4-about-font-size: 48px;
+
+    --hero-sub-span-font-size: 64px;
+    --bs-container-width: 1440px;
+    --p-font-size: 24px;
+  }
+  @include respond-up(xxl) {
+    --bs-container-width: 1320px;
+  }
+}
+
+*,
+*::before,
+*:after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+main,
+section,
+footer {
+  width: 100%;
+  display: block;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}

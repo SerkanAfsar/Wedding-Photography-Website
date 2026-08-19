@@ -1,0 +1,28 @@
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+.hero-sub {
+  display: block;
+  width: 100%;
+
+  background: get-colors(color-bg-gray);
+  &-info {
+    @include flexBox(column, center, center);
+
+    h3 {
+      display: block;
+      margin-top: 10px;
+    }
+    span {
+      display: block;
+    }
+
+    margin: auto;
+    @include respond-up(lg) {
+      gap: 10px;
+    }
+    @include respond-up(xl) {
+      max-width: 1060px;
+      gap: 15px;
+    }
+  }
+}

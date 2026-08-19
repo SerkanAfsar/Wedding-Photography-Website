@@ -1,0 +1,49 @@
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+.testimonials {
+  display: block;
+  width: 100%;
+  h2 {
+    margin-bottom: 20px;
+  }
+  &-inner {
+    width: 100%;
+    display: block;
+    background: get-colors(color-bg-gray2);
+    position: relative;
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      background: #f1e9e1;
+      color: #b9a899;
+      font-size: 40px;
+      padding-bottom: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 0px;
+      transform: translateX(-50%);
+      @include respond-up(xl) {
+        transform: translateX(-120%);
+      }
+    }
+
+    .next {
+      right: 0px;
+      transform: translateX(50%);
+      @include respond-up(xl) {
+        transform: translateX(120%);
+      }
+    }
+  }
+}

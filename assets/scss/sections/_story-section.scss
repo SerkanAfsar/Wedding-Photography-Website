@@ -1,0 +1,101 @@
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+.story {
+  display: block;
+  width: 100%;
+
+  &-info {
+    @include flexBox(column, center, center);
+    gap: 20px;
+    img {
+      width: 100%;
+    }
+
+    @include respond-up(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      img {
+        flex: 0.5 0 0;
+        width: 40%;
+      }
+    }
+    @include respond-up(lg) {
+      gap: 0px;
+      flex-wrap: nowrap;
+      @include flexBox(row, space-between, flex-end);
+
+      img {
+        width: 30%;
+        height: 300px;
+      }
+    }
+    @include respond-up(xl) {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+
+    img {
+      &:last-child {
+        @include respond-up(lg) {
+          margin-left: 20px;
+        }
+        @include respond-up(xxl) {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+  &-first {
+    @include flexBox(column, center, center);
+    background: get-colors(color-bg-gray2);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+
+    p {
+      text-align: center;
+      max-width: 400px;
+    }
+
+    h5 {
+      color: get-colors(color-primary);
+      text-align: center;
+      font-family: $font-cormorant;
+      font-size: 120px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 10px;
+      letter-spacing: 6px;
+    }
+    h6 {
+      margin-top: 40px;
+      color: #555;
+      font-family: $font-ephesis;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.3px;
+      @include respond-up(xl) {
+        font-size: 40px;
+      }
+      @include respond-up(xxl) {
+        font-size: 46px;
+      }
+    }
+    @include respond-up(lg) {
+      align-items: flex-start;
+      text-align: left;
+      width: calc((100vw / 3) + calc(100vw - var(--bs-container-width) / 2));
+      padding: 40px 20px 20px calc((100vw - 100%) / 2);
+      margin-left: calc((100vw - 100%) / -2);
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

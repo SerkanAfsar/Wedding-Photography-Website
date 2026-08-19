@@ -1,0 +1,58 @@
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+.footer {
+  display: block;
+  background: get-colors(color-bg-gray2);
+  padding: 10px 0px;
+  margin-top: 40px;
+  text-align: center;
+  nav {
+    @include respond-up(xl) {
+      padding: 0px 20px;
+    }
+    ul {
+      @include flexBox(column, space-between, center);
+
+      flex-wrap: nowrap;
+
+      @include respond-up(lg) {
+        flex-direction: row;
+      }
+      li,
+      li > a {
+        display: block;
+      }
+      li {
+        &.img {
+          order: -1;
+          flex-shrink: 0;
+          margin-bottom: -10px;
+          @include respond-up(lg) {
+            order: inherit;
+          }
+          img {
+            max-width: 220px;
+          }
+        }
+        margin-bottom: 20px;
+      }
+    }
+  }
+  p {
+    max-width: 620px;
+  }
+  &-social {
+    @include flexBox;
+    gap: 20px;
+  }
+  &-copyright {
+    margin-top: 10px;
+    max-width: 288px;
+    display: block;
+    line-height: 1.6;
+    padding-left: 4px;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

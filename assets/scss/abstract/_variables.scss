@@ -1,0 +1,32 @@
+$font-fairplay: "Playfair Display SC", serif;
+$font-ephesis: "Ephesis", cursive;
+$font-cormorant: "Cormorant Garamond", serif;
+$font-railway: "Raleway", sans-serif;
+
+$theme-colors: (
+  color-primary: #bba085,
+  color-menu-link: #363636,
+  color-p: #2d2d2d,
+  color-bg-gray: #f4f4f4,
+  color-white: #fff,
+  color-dark-gray: #4a4a4a,
+  color-bg-gray2: #f8f8f8,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  3xl: 2560px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
