@@ -9,5 +9,5 @@ Serkan Afşar - Frontend Developer [https://github.com/SerkanAfsar](https://gith
 ### Links
 
 - **Figma:** [View Design](https://www.figma.com/design/OQ26PgZrhohW04M5aYzMOH/9-Page-Wedding-Photography-Website-UI-Design--Community-?node-id=2-71&m=dev)
-- **Live Demo:** [View Website](https://serkanafsar.github.io/restaurant-landing-page/)
+- **Live Demo:** [View Website](https://serkanafsar.github.io/restaurant-landing-page1/)
 - **Developer:** [Serkan Afşar - Frontend Developer](https://github.com/SerkanAfsar)
